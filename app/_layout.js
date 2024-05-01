@@ -5,7 +5,7 @@ import '../global.css';
 // Import your global CSS file
 export default function _layout() {
   return (
-    <View>
+    <View className='flex-1'>
       <Slot />
     </View>
   )
