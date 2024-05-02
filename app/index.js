@@ -25,17 +25,19 @@ export default function StartPage() {
     <View className='flex-1 justify-center items-center'>
       {isLoading?(
         <ActivityIndicator size='large'color='blue'/>
+        
       ):(
       post.map((data, index)=>(
           <View key={index} className='flex-2 justify-center items-center w-300'>
-                  <Icon.ArrowDownLeft width={30} height={50} stroke='yellow' strokeWidth={5}/>
             <Text  className='text-green-500'>{data.title}</Text>
             <Text className='text-yellow-500'>{data.body}</Text>
-        
           </View>
         ))
       )}
       {/* <Button title='Click here to fetch data'onPress={HandleData} /> */}
+      <TouchableOpacity>
+      <Icon.ArrowLeft width={30} height={50} stroke='orange' strokeWidth={5}/>
+      </TouchableOpacity>
 
     </View>
     </ScrollView>
